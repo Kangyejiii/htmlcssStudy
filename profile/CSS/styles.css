@@ -1,0 +1,60 @@
+
+*{
+    box-sizing: border-box;    
+}
+
+html, body{
+ height: 100%;
+}
+.header{
+    background-image: url('https://kpopping.com/uploads/documents/kpics_gallery/x47,2813,29.jpeg.keep.fff.png.pagespeed.ic.Q8E_YxqkrY.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center top;
+    height: 500px;
+    
+}
+
+.header .content{
+    color:white;
+    text-align: center;
+    margin-top: 200px;
+    display:inline-block;
+    width:100%;
+    vertical-align: middle;
+}
+
+.header h1 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 60px;
+}
+
+.header h2{
+    margin-top: 0px;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+
+#logo{
+    text-decoration: none;
+    color:purple;
+    font-size: 30px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 5px;
+}
+
+
+
+#videolink{
+    text-decoration: none;
+    border : 1px solid white;
+    padding:8px 40px ;
+    display: inline-block;
+    margin-top: 10px;
+    color:white;
+}
+
+
