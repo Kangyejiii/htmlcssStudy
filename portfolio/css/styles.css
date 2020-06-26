@@ -4,6 +4,7 @@
 
 body{
     margin:0;
+    
 }
 
 .container{
@@ -78,7 +79,7 @@ footer{ grid-area:footer;
 }
 main h3{
     font-family: Arial, Helvetica, sans-serif ;
-    font-size: 25px;
+    font-size: 1.5em;
     color: black;
     font-weight: bold;
     text-align: center;
@@ -98,9 +99,8 @@ main h3{
 
 /*취미 여행*/
 .hobby{
-    padding-top: 25px;
-    margin-left: 100px;
-    margin-right: 100px;
+    padding-top: 50px;
+    margin:0px 5em;
     
 }
 
@@ -108,7 +108,7 @@ main h3{
 .hobby  h3{
     font-family: Arial, Helvetica, sans-serif;
     font-size:25px;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
     text-align: center;    
 }
 
@@ -164,8 +164,7 @@ grid-area:first;
 .profile .aboutme{
     grid-area:right;
     text-align: center;
-    
-    
+
 }
 
 @media all and (max-width:575px){
@@ -205,8 +204,9 @@ grid-area:first;
         "right";
     }
 
-    #navbar {
-        width: 100%;
+    
+
+    
 }
 
 
