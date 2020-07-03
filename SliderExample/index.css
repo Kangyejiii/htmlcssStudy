@@ -1,0 +1,42 @@
+
+*{
+    margin:0; padding:0;
+}
+
+li{list-style: none;}
+
+.slide_wrapper{
+    position: relative;
+    width: 960px;
+    margin:0 auto;
+    height: 300px;
+    overflow: hidden; 
+    /* 넘치는건 안보여도 되니깐  960이 넘어가면 hidden */
+}
+
+.slides {
+    position: absolute;
+    left:0; top:0; 
+    /* 왼쪽상단 */
+   /* width: 2610px;*/
+    /* (후에 스크립트 작성) 300*8 2400, margin 30*7 =210  */
+    transition:left 0.5s ease-out;  /* 움직임효과 */
+}
+/* 마지막은 안해도되니깐 */
+.slides li:not(:last-child){
+    float: left;
+    margin-right: 30px;
+}
+
+.controls{
+    text-align: center;
+    margin-top:50px;
+}
+
+.controls span {
+    background: #333;
+    color : #fff;
+    padding: 10px 20px;
+    margin:0 10px;
+   
+}
