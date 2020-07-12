@@ -1,0 +1,443 @@
+/* Global */
+*,
+*::before,
+*::after{
+    margin : 0;
+    padding : 0;
+}
+
+html {
+    font-size : 10px;
+    font-family: 'SF Pro Display', sans-serif;
+}
+
+a{
+    display : block;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 98rem;
+    margin: 0 auto;
+    padding : 0 2.2rem;
+}
+/* Header */
+header{
+    position: fixed;
+    top: 0;
+    z-index: 1400; /*정리하기 */
+    height: 4.4rem;
+    width: 100%; /*header가 가로로 꽉차게끔 */
+    background-color: rgba(0,0,0,.8);
+    backdrop-filter: blur(2rem); /*스크롤하면서 블러처리 흐리게*/
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:0 -1rem;
+}
+
+
+.nav-list-mobile{
+    display: none;
+}
+
+.nav-link{
+    font-size : 1.4rem;
+    color: #fff;
+    padding: 0 1rem;
+    transition: opacity .5s;
+}
+
+.nav-link:hover{
+    opacity: .7; /*요소의 투명도를 정할수있다. 마우스를 올리면 흐려집니당*/
+}
+
+/*애플 로고 아이콘*/
+.nav-link-apple{
+    width: 1.6rem;
+    height: 4.4rem; /*header 크기랑 맞게 4.4rem을 맞춰서? */
+    background: url("images/icons/apple.svg") center no-repeat;
+}
+
+/*찾기 아이콘*/
+.nav-link-search{
+    width: 1.6rem;
+    height: 4.4rem; /*header 크기랑 맞게 4.4rem을 맞춰서? */
+    background: url("images/icons/search.svg") center no-repeat;
+}
+
+/*장바구니 아이콘*/
+.nav-link-bag {
+    width: 1.4rem;
+    height: 4.4rem;
+    background: url("images/icons/bag.svg") center no-repeat;
+}
+
+/*11-pro section*/
+.iphone-11-pro{
+    background: url("images/hero/iphone-11-pro/iphone_11_pro_large.jpg");
+    margin-top: 4.4rem; /*navigation 높이만큼 마진 주기(안하면 겹쳐보인다)*/
+   
+    /* border-top:none; */
+
+}
+
+
+.title{
+    color:#fff;
+    text-align: center;
+    padding-top: 5.5rem;
+}
+
+.title-heading{
+    font-size: 5.6rem;
+    line-height: 1.07143;
+    letter-spacing: -.005rem;
+}
+
+.title-sub-heading{
+    font-size: 2.65rem;
+    margin-top: .6rem;
+    letter-spacing: .008rem;
+    font-weight: 400;
+}
+
+.title-price{
+    font-size: 1.7rem;
+    color:#888;
+    margin-top: .68rem;
+}
+
+.cta{
+    text-align: center;
+    margin-top: 1.8rem;
+}
+
+.cta-link{
+    color : #66bbff;
+    font-size: 2.1rem;
+    display: inline-block;
+}
+/* Learn more 이랑 Buy 간격 넓히기 위해서 Buy한테만 마진 주기  */
+.cta-link:nth-child(2){
+    margin-left:2.6rem;
+}
+
+.cta-link:hover{
+    border-bottom: 2px solid #66bbff;
+}
+/* hero와 추가로 작성한 .iphone 11 pro 를 내려보자 그럼 사진이 나올것이다. */
+
+/* iPhone 11 section */
+.iphone-11{
+    background: url("images/hero/iphone-11/iphone_11_large.jpg");
+}
+
+.title-dark{
+    color:#000;
+}
+
+.cta-link-darker{
+    color:#0070c9;
+}
+
+.cta-link-darker:hover{
+    border-bottom-color: #0070c9;
+}
+
+.watch{
+    background: url("images/hero/watch/watch_large.jpg") ;
+}
+
+
+
+.title-heading-watch{
+    height: 7.8rem;
+    background: url("images/hero/watch/logo_watch_large.png") center no-repeat; /*로고!*/
+    background-size: auto 7.8rem;
+    margin-top:1.6rem;
+}
+
+
+/* Moved to the bottom of all section styles to keep consistent styles */
+/* 공통적인 부분을 hero에! */
+.hero{
+    height: 69.2rem; 
+    background-size: auto 73.6rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-top: .6rem solid #fff;
+    border-bottom: .6rem solid #fff;
+}
+
+/* 왜 위에다 쓰지 않고,,, 여기다가 다시 할까? ->위에다가하면 없어지지않음! 
+hero와 자리를 바꾸면? 원하는대로 안나옴 */
+.iphone-11-pro{
+    border-top:none;  
+}
+/* end */
+
+@media screen and (max-width: 1068px){
+    .iphone-11-pro{
+        background: url("images/hero/iphone-11-pro/iphone_11_pro_medium.jpg");
+    }
+
+    .iphone-11{
+        background:url("images/hero/iphone-11/iphone_11_medium.jpg");
+    }
+
+    .watch{
+        background: url("images/hero/watch/watch_medium.jpg");
+    }
+
+    .hero{
+        height: 65rem;
+        background-size: auto 69.8rem;
+        background-position: bottom center;
+        background-repeat: no-repeat;
+    }
+
+    .title-heading{
+        font-size:4.4rem;
+    }
+
+    .title-sub-heading{
+        font-size:2.4rem;
+    }
+
+    .cta-link:nth-child(2){
+        margin-left: 2rem;
+    }
+
+    .title-heading-watch{
+        height: 6.2rem;
+        background: url("images//hero/watch/logo_watch_medium.png") center no-repeat;
+        background-size: auto 6.2rem;
+    }
+
+}
+
+@media screen and (max-width: 767px){
+    header{
+        height: 4.8rem;
+        transition: background .36s cubic-bezier(0.32,0.08,0.24,1),
+                    height .36s cubic-bezier(0.32,0.08,0.24,1);
+    }
+
+    header .container{
+        padding:0;
+    }
+
+    .iphone-11-pro{
+        margin-top:4.8rem;
+    }
+    
+    /* 모바일 버전이니깐 큰 버전은 안보이게 
+    .nav-list-larger{
+        display:none;
+    }  */
+
+    .nav-list{
+        margin-top: 0;
+    }
+
+    .nav-list-mobile{
+        display:flex;
+    } 
+
+    /* <li>태그에있는 클래스, 애플로고 bag로고  */
+    .nav-item{
+        width: 4.8rem;
+        height:4.8rem;
+        display: flex;
+        justify-content: center;
+    }
+    /* nav-list-larger도 display했는데 왜 또 이걸 .. */
+    .nav-item-hidden{
+        display:none;
+    }
+
+    
+    .mobile-menu{
+        position: relative;
+        z-index: 1500;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+
+    .line{
+        position: absolute;
+        width: 1.7rem;
+        height: 1px;
+        background-color : #fff;
+        transition: margin-top .3192s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+    }
+
+
+    .line-top{
+        margin-top: 3px;
+    }    
+
+    .line-bottom{
+        margin-top: -.4rem;
+    }
+
+    .active .line-top{
+        margin-top: 0;
+        transform: rotate(45deg);
+        transition: transform .3192s .1s cubic-bezier(0.04, 0.04, 0.12, 0.96)
+    }
+
+    .active .line-bottom{
+        margin-top: 0;
+        transform: rotate(-45deg);
+        transition: transform .3192s .1s cubic-bezier(0.04, 0.04, 0.12, 0.96)
+    }
+
+    header.active{
+        height: 100%;
+        background-color:#000;
+    }
+
+
+    .nav-link-apple{
+        width: 1.8rem;
+        height: 4.8rem;
+        position: relative;
+        z-index:1500;
+    }
+
+    .nav-link-bag{
+        width : 1.6rem;
+        height: 4.8rem;
+        transition: opacity 3s;
+    }
+
+    .nav{
+        position: relative;
+    }
+
+    .nav-link{
+        font-size: 1.7rem;
+        padding: 0;
+        margin: auto 0;
+    }
+    /* 위에껀 지움 */
+    .nav-list-larger{
+        position: fixed;
+        top:0;
+        left: 0;
+        width: 0;
+        height: 0;
+        display: block;
+        padding: 10.5rem 5rem;
+        z-index: 1000;
+        box-sizing: border-box;
+        /* 눈에만 안보이는거  */
+        opacity: 0;
+        /* hover 했을 때 pointer 되니 안보이게끔  */
+        visibility: hidden;
+        transition: opacity .3s;
+    }
+
+    .active .nav-list-larger{
+        width: 100%;
+        height: 100vh;
+        opacity: 1;
+        /*  */
+        visibility: visible; 
+    }
+
+    .active .nav-link-bag{
+        opacity: 0;
+        transition: opacity .3s;
+    }
+
+    .nav-list-larger .nav-item{
+        width: 100%;
+        justify-content: flex-start;
+        border-bottom: 2px solid rgba(255,255,255,.1);
+    }
+
+
+    .nav-list-larger .nav-item:nth-child(9){
+        border-bottom: none;
+    }
+
+    .active .nav-list-larger .nav-item {
+        animation: fadeIn 1s ease-in;
+    }
+
+
+    @keyframes fadeIn {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+
+}
+
+@media screen and (max-width: 735px){
+    .iphone-11-pro{
+        background: url("images/hero/iphone-11-pro/iphone_11_pro_small.jpg");
+    }
+
+    .iphone-11{
+        background:url("images/hero/iphone-11/iphone_11_small.jpg");
+    }
+
+    .watch{
+        background: url("images/hero/watch/watch_small.jpg");
+    }
+
+
+    .hero{
+        height: 50rem;
+        background-size: auto 54.8rem;
+        background-position: bottom center;
+        background-repeat: no-repeat;
+    }
+
+    .title{
+        padding: 3.7rem;
+    }
+
+    .title-heading{
+        font-size: 3.2rem;
+    }
+
+    .title-sub-heading{
+        font-size: 1.9rem;
+    }
+
+    .title-heading-watch{
+        margin-top:  -.5rem;
+        margin-bottom: 0;
+    }
+
+    .title-price{
+        font-size: 1.4rem;
+    }
+
+    .cta{
+        margin-top: .7rem;
+    }
+
+    .cta-link{
+        font-size: 1.9rem;
+    }
+
+}
